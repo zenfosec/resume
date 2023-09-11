@@ -94,6 +94,8 @@ Penetration Tester with more than two decades of professional hacking experience
 
 - Built & secured wireless network infrastructure nationwide
 
+### Network Administrator
+
 06/01 - 05/03 - Branch Banking & Trust, Jacksonville, FL
 
 - Responded to virus threats
