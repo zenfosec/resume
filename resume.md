@@ -110,19 +110,9 @@ Penetration Tester with more than two decades of professional hacking experience
 
 - Certified Information Systems Security Professional (CISSP)
 
-- Certified Ethical Hacker (CEH)
-
-- GIAC Penetration Tester (GPEN)
-
-- GIAC Certified Incident Handler (GCIH)
-
-- GIAC Certified Forensic Analyst (GCFA)
-
 - GIAC Web Application Penetration Tester (GWAPT)
 
-- GIAC Security Essentials (GSEC)
-
-- CompTIA Security+
+- GIAC Certified Forensic Analyst (GCFA)
 
 ## Professional Memberships
 
