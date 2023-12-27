@@ -4,7 +4,7 @@ zenfosec@gmail.com - San Francisco, CA - @zenfosec
 
 ## Objective
 
-Penetration Tester with more than two decades of professional hacking experience seeking a Senior-level Red Team role to improve your company's security posture by identifying and remediating real-world, critical vulnerabilities and effectively manage emerging threats.
+Penetration Tester with more than a decade of professional hacking experience seeking a Senior-level Red Team role to improve your company's security posture by identifying and remediating real-world, critical vulnerabilities and effectively manage emerging threats.
 
 ## Overview of Skills
 
