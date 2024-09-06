@@ -4,7 +4,7 @@ dave@eofsecurity.ninja - San Francisco, CA - @zenfosec
 
 ## Objective
 
-Principal Offensive Security Consultant with more than a decade of professional hacking experience seeking a technical leadership role to improve your company's security posture by identifying and remediating real-world, critical vulnerabilities and effectively manage emerging threats.
+Principal Offensive Security Consultant with more than a decade of professional hacking experience seeking to improve your company's security posture by identifying and remediating real-world, critical vulnerabilities and effectively managing emerging threats.
 
 ## Overview of Skills
 
