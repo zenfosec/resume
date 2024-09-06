@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>resume.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="dave-howard">Dave Howard</h1>
+<p>dave@eofsecurity.ninja - San Francisco, CA - @zenfosec</p>
+<h2 id="objective">Objective</h2>
+<p>Principal Offensive Security Consultant with more than a decade of professional hacking experience seeking to improve your company's security posture by identifying and remediating real-world, critical vulnerabilities and effectively managing emerging threats.</p>
+<h2 id="overview-of-skills">Overview of Skills</h2>
+<p><strong>Technical -</strong> Network, Application, &amp; Wireless Penetration Testing, Artificial Intelligence, LLMs, Vulnerability Assessment, Incident Response, Digital Forensics, Attack Detection</p>
+<p><strong>Business -</strong> Proven Technical Leader, Exceptional Communications Skills, High Level Strategy, Self-Motivated, Dedicated, Reporting &amp; Presentation</p>
+<h2 id="technical-tool-proficiencies">Technical Tool Proficiencies</h2>
+<p><strong>Network Penetration Testing -</strong> Kali Linux, Metasploit, Nessus, Qualys, Rapid7, nmap, Cobalt Strike, Hydra, Hashcat, RainbowCrack, John The Ripper, Wireshark, bash, python</p>
+<p><strong>Application Penetration Testing -</strong> Burpsuite, OWASP ZAP, WebInspect, Appscan, sqlmap, ysoserial, SWFIntruder, w3af, gobuster, Correlium, adb, Genymotion, MobSF, javascript, java</p>
+<p><strong>IR / Forensics / Detection -</strong> Sleuthkit, Autopsy, Forensics Toolkit (FTK), EnCase, Mandiant Intelligent Response, SIFT Linux Distribution, Memoryze, Audit Viewer</p>
+<h2 id="experience">Experience</h2>
+<h3 id="senior-offensive-security-engineer">Senior Offensive Security Engineer</h3>
+<p>03/22 - 08/24 - Quantcast, San Francisco, CA</p>
+<ul>
+<li>
+<p>Executed application and network penetration tests against AWS infrastructure to identify and remediate vulnerabilities</p>
+</li>
+<li>
+<p>Architected and led the security program for the Software Engineering team</p>
+</li>
+<li>
+<p>Implemented open source application and container security tools (SCA/SAST/DAST) to integrate security into the CI/CD lifecycle</p>
+</li>
+</ul>
+<h3 id="principal-security-consultant---attack--penetration-team">Principal Security Consultant - Attack &amp; Penetration Team</h3>
+<p>06/11 - 03/22 - Optiv, San Francisco (remote)</p>
+<ul>
+<li>
+<p>Performed Red Team engagements including network, application, wireless, and hardware penetration tests for Fortune 100 clients</p>
+</li>
+<li>
+<p>Created and managed an internal penetration testing program on a long term, multi-million-dollar, staff augmentation engagement</p>
+</li>
+<li>
+<p>Acted as Technical Lead for an Attack and Penetration Testing team and helped grow it from 2 to 20 offensive security consultants</p>
+</li>
+<li>
+<p>Ensured PCI and HIPAA compliance through biannual penetration and network segmentation testing</p>
+</li>
+<li>
+<p>Authored a database of findings to support vulnerability reporting</p>
+</li>
+<li>
+<p>Guided network administrators and developers with remediation and performed validation testing</p>
+</li>
+<li>
+<p>Liaised with senior leadership teams to drive security initiatives and provide strategic guidance</p>
+</li>
+</ul>
+<h3 id="senior-security-engineer">Senior Security Engineer</h3>
+<p>09/07 - 06/11 - Emerson, St. Louis, MO</p>
+<ul>
+<li>
+<p>Designed and managed vulnerability assessment program for 100,000+ node network, resulting in an 81% reduction in critical vulnerabilities</p>
+</li>
+<li>
+<p>Performed Web Application penetration tests as part of Web Application Assessment program (co-designed)</p>
+</li>
+<li>
+<p>Executed network-based penetration testing of Emerson divisions and third-party vendors housing sensitive information</p>
+</li>
+<li>
+<p>Established Incident Response program to fight Advanced Persistent Threats (APTs)</p>
+</li>
+<li>
+<p>Built a Digital Forensics service offering and performed forensics analysis as part of incident response and as a service to divisional HR &amp; Legal</p>
+</li>
+<li>
+<p>Created and led global Computer Security Incident Response Team (CSIRT)</p>
+</li>
+<li>
+<p>Deployed and managed remote Forensics and Incident Response Software (Mandiant Intelligent Response)</p>
+</li>
+</ul>
+<h3 id="security-sales-engineer">Security Sales Engineer</h3>
+<p>05/05 - 09/07 - Spectorsoft, Vero Beach, FL</p>
+<ul>
+<li>
+<p>Supported sales efforts through the implementing of monitoring software</p>
+</li>
+<li>
+<p>Implemented security software for top tier government, defense, and financial clients for internal investigations and security monitoring</p>
+</li>
+<li>
+<p>Provided leadership to corporate software technical support team</p>
+</li>
+</ul>
+<h3 id="systems-engineer">Systems Engineer</h3>
+<p>06/03 - 05/05 - CSX, Jacksonville, FL</p>
+<ul>
+<li>
+<p>Implemented open source security solutions</p>
+</li>
+<li>
+<p>Responsible for Unix hardening</p>
+</li>
+<li>
+<p>Performed as technical lead</p>
+</li>
+<li>
+<p>Created and supported thin client environment</p>
+</li>
+<li>
+<p>Managed 30 Unix servers</p>
+</li>
+<li>
+<p>Built &amp; secured wireless network infrastructure nationwide</p>
+</li>
+</ul>
+<h3 id="network-administrator">Network Administrator</h3>
+<p>06/01 - 05/03 - Branch Banking &amp; Trust, Jacksonville, FL</p>
+<ul>
+<li>
+<p>Responded to virus threats</p>
+</li>
+<li>
+<p>Managed patching &amp; endpoint security</p>
+</li>
+<li>
+<p>Built and maintained server infrastructure</p>
+</li>
+</ul>
+<h2 id="certifications">Certifications</h2>
+<ul>
+<li>
+<p>Offensive Security Certified Professional (OSCP)</p>
+</li>
+<li>
+<p>Certified Information Systems Security Professional (CISSP)</p>
+</li>
+<li>
+<p>GIAC Web Application Penetration Tester (GWAPT)</p>
+</li>
+<li>
+<p>GIAC Certified Forensic Analyst (GCFA)</p>
+</li>
+</ul>
+<h2 id="professional-memberships">Professional Memberships</h2>
+<ul>
+<li>
+<p>Information Systems Security Association (ISSA)</p>
+</li>
+<li>
+<p>Open Web Application Security Project (OWASP)</p>
+</li>
+<li>
+<p>International Association of Computer Investigative Specialists (IACIS)</p>
+</li>
+<li>
+<p>High Technology Crime Investigation Association (HTCIA)</p>
+</li>
+<li>
+<p>InfraGard</p>
+</li>
+</ul>
+<h2 id="education">Education</h2>
+<p>1997 - 2001 - Bachelor's Degree - Management Information Systems - University of Central Florida, Orlando, FL</p>
+<h2 id="references">References</h2>
+<p>Available upon request</p>
+
+</body>
+</html>
